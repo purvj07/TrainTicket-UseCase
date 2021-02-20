@@ -12,10 +12,7 @@ public class Train
 	private double ticketprice;
 	
 	
-	public Train() 
-	{
-		super();
-	}
+	
 	public Train(int trainNo, String trainName, String source, String destination, double ticketprice) {
 		super();
 		this.trainNo = trainNo;
@@ -54,6 +51,12 @@ public class Train
 	}
 	public void setTicketprice(double ticketprice) {
 		this.ticketprice = ticketprice;
+	}
+	
+	@Override
+	public String toString() {
+		return "Train [trainNo=" + trainNo + ", trainName=" + trainName + ", source=" + source + ", destination="
+				+ destination + ", ticketprice=" + ticketprice + "]";
 	}
 	
 	

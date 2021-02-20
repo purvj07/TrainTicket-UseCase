@@ -2,23 +2,20 @@ package trainTicketApp;
 
 import java.util.TreeMap;
 
-public class Passenger
+public class Passenger implements Comparable<Passenger>
 {
 
 	private String name;
 	private int age;
 	private char gender;
 	
-	
-	public Passenger() {
-		super();
-	}
+	  
 
 		public Passenger(String name, int age, char gender) {
-			super();
-			this.name = name;
-			this.age = age;
-			this.gender = gender;
+		super();
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
 	}
 
 		public String getName() {
@@ -49,7 +46,17 @@ public class Passenger
 		public String toString() {
 			return "Passenger [name=" + name + ", age=" + age + ", gender=" + gender + "]";
 		}
-	
+
+		@Override
+		public int compareTo(Passenger o) {
+			
+			return name.compareTo(o.name);
+		}
+
+		
+
+		
+		
 		
 
 	
